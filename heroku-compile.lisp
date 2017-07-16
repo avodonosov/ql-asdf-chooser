@@ -12,7 +12,7 @@
 (print ">>> saving image qach-proxy...")
 (sb-ext:save-lisp-and-die (merge-pathnames "qach-proxy" *build-dir*)
                           :toplevel (lambda ()
-                                      (ad-proxy:start :port (parse-integer (asdf::getenv "PORT")))
+                                      (qach-proxy:start :port (parse-integer (asdf::getenv "PORT")))
                                       (loop (sleep 1000)))
                           :executable t
                           :purify t)
