@@ -3,7 +3,7 @@
 (print ">>> Building system....")
 (require 'asdf)
 (asdf:disable-output-translations)
-(require-quicklisp :version "2017-02-27")
+(require-quicklisp :version "2013-02-17")
 (let* ((this-file (load-time-value (or *load-truename* #.*compile-file-pathname*)))
        (this-file-dir (make-pathname :directory (pathname-directory this-file))))
   (push this-file-dir asdf:*central-registry*))
