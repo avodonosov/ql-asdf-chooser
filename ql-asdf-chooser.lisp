@@ -28,7 +28,8 @@ to be replaced by ASDF version - a string like \"3.21.1\".")
 (defun ensure-asdf-source (version &key (workdir *workdir*))
   (let ((file (asdf-source-file version :workdir workdir)))
     (or (probe-file file)
-        (and (ql-http:http-fetch (format nil
+        (and (ensure-directories-exist file)
+             (ql-http:http-fetch (format nil
                                          *asdf-download-url-template*
                                          version)
                                  file)
