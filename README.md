@@ -16,3 +16,6 @@ ccl-1.11/lx86cl64 --no-init \
 ```
 
 This tool is useful when working with old releases of lisp implementations which supply outdated ASDF unable to load current versions of libraries.
+
+
+Notes: https://bugs.launchpad.net/asdf/+bug/1704679
